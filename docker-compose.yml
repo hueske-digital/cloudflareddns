@@ -19,3 +19,5 @@ services:
       - DOMAINS
       - PROXIED
       - IP6_PROVIDER=none
+      - TZ
+      - UPDATE_CRON=@every 1m
