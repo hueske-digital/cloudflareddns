@@ -3,9 +3,7 @@ version: "3.8"
 services:
   app:
     image: favonia/cloudflare-ddns:latest
-    cap_add:
-      - SETUID
-      - SETGID
+    user: "1000:1000"
     cap_drop:
       - all
     read_only: true
@@ -13,8 +11,6 @@ services:
       - no-new-privileges:true
     restart: unless-stopped
     environment:
-      - PUID=1000
-      - PGID=1000
       - CF_API_TOKEN
       - DOMAINS
       - PROXIED
