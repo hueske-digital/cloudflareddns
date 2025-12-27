@@ -11,7 +11,7 @@ services:
       - no-new-privileges:true
     restart: unless-stopped
     environment:
-      - CF_API_TOKEN
+      - CLOUDFLARE_API_TOKEN
       - DOMAINS
       - PROXIED
       - IP6_PROVIDER=none
